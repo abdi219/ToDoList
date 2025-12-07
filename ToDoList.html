@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="ToDoList.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Task Manager</h1>
+        <p class="subtitle">Organize your daily tasks efficiently</p>
+      </header>
+
+      <div class="input-section">
+        <div class="input-group">
+          <input 
+            placeholder="Add a new task..." 
+            class="js-name-input name-input" 
+            aria-label="Task name"
+          />
+          <input 
+            type="date" 
+            class="js-dueDate-input dueDate-input" 
+            aria-label="Due date"
+          />
+          <button class="add-button js-add-button" aria-label="Add task">Add</button>
+        </div>
+      </div>
+
+      <div class="js-todo-list todo-list"></div>
+      <div class="empty-state js-empty-state">
+        <p>No tasks yet. Create one to get started.</p>
+      </div>
+    </div>
+
+    <script src="ToDoList.js"></script>
+  </body>
+</html>

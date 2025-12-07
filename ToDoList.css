@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 50px 40px 40px;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a202c;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #718096;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.input-section {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.name-input,
+.dueDate-input {
+  flex: 1;
+  min-width: 140px;
+  padding: 14px 18px;
+  font-size: 14px;
+  border: 1.5px solid rgba(226, 232, 240, 0.8);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  font-family: inherit;
+  color: #1a202c;
+}
+
+.name-input::placeholder,
+.dueDate-input::placeholder {
+  color: #a0aec0;
+}
+
+.name-input {
+  flex: 1.5;
+}
+
+.name-input:focus,
+.dueDate-input:focus {
+  outline: none;
+  border-color: rgba(232, 233, 235, 0.5);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 3px rgba(71, 85, 179, 0.08);
+}
+
+.add-button {
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #dddde0 0%, #afa5b8 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+  letter-spacing: 0.3px;
+}
+
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(101, 102, 104, 0.15);
+}
+
+.add-button:active {
+  transform: translateY(0);
+}
+
+.todo-list {
+  padding: 20px 40px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(232, 233, 235, 0.5);
+  box-shadow: 0 8px 16px rgba(31, 38, 135, 0.1);
+}
+
+.todo-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.todo-name {
+  font-size: 15px;
+  color: #1a202c;
+  font-weight: 500;
+  flex: 1;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.todo-date {
+  font-size: 13px;
+  color: #718096;
+  background: rgba(226, 232, 240, 0.5);
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.delete-button {
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  background: #ef4444;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+
+.delete-button:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.delete-button:active {
+  transform: scale(0.95);
+}
+
+.empty-state {
+  display: none;
+  text-align: center;
+  padding: 80px 40px;
+  color: #a0aec0;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.empty-state.show {
+  display: block;
+}
+
+/* Scrollbar styling */
+.todo-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.todo-list::-webkit-scrollbar-track {
+  background: rgba(226, 232, 240, 0.3);
+  border-radius: 10px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.5);
+  border-radius: 3px;
+}
+
+.todo-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
