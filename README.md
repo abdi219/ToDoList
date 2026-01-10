@@ -3,6 +3,10 @@
 This is a simple Todo List web app built using **HTML, CSS, and JavaScript**.  
 It’s a small project I made to practice DOM manipulation, event handling, and dynamic updates in JavaScript.
 
+## Visuals
+
+<img width="1919" height="906" alt="image" src="https://github.com/user-attachments/assets/aeb81f54-5a23-4bb9-91e4-15fae6a72d0e" />
+
 ## Features
 
 - Add new tasks with an optional due date
@@ -30,3 +34,4 @@ It’s a small project I made to practice DOM manipulation, event handling, and 
 - Add task editing functionality
 - Add task filtering and sorting by due date
 - Add notifications or reminders for due tasks
+
